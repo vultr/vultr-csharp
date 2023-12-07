@@ -1,0 +1,29 @@
+name: "Code Generation"
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  generation-job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+    container:
+      image: openapitools/openapi-generator-cli:latest
+    steps:
+      - name: Install git
+        run: (apt-get -y update && apt-get -y install git)
+      - name: Set git directory
+        run: (git config --global --add safe.directory "$GITHUB_WORKSPACE")
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run code generation
+        run: (bash /usr/local/bin/docker-entrypoint.sh generate -i blob/v0.0.1.json --additional-properties moduleName=VultCSharp --skip-validate-spec -g csharp )
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
