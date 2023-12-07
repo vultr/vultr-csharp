@@ -1,0 +1,53 @@
+# Org.OpenAPITools.Model.UpdateAdvancedOptionsRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**AutovacuumAnalyzeScaleFactor** | **float** | Accepted values: 0 - 1 | [optional] 
+**AutovacuumAnalyzeThreshold** | [**Int**](Int.md) | Accepted values: 0 - 2147483647 | [optional] 
+**AutovacuumFreezeMaxAge** | [**Int**](Int.md) | Accepted values: 200000000 - 1500000000 | [optional] 
+**AutovacuumMaxWorkers** | [**Int**](Int.md) | Accepted values: 1 - 20 | [optional] 
+**AutovacuumNaptime** | [**Int**](Int.md) | Accepted values: 1 - 86400 | [optional] 
+**AutovacuumVacuumCostDelay** | [**Int**](Int.md) | Accepted values: -1 - 100 | [optional] 
+**AutovacuumVacuumCostLimit** | [**Int**](Int.md) | Accepted values: -1 - 10000 | [optional] 
+**AutovacuumVacuumScaleFactor** | **float** | Accepted values: 0 - 1 | [optional] 
+**AutovacuumVacuumThreshold** | [**Int**](Int.md) | Accepted values: 0 - 2147483647 | [optional] 
+**BgwriterDelay** | [**Int**](Int.md) | Accepted values: 10 - 10000 | [optional] 
+**BgwriterFlushAfter** | [**Int**](Int.md) | Accepted values: 0 - 2048 | [optional] 
+**BgwriterLruMaxpages** | [**Int**](Int.md) | Accepted values: 0 - 1073741823 | [optional] 
+**BgwriterLruMultiplier** | **float** | Accepted values: 0 - 10 | [optional] 
+**DeadlockTimeout** | [**Int**](Int.md) | Accepted values: 500 - 1800000 | [optional] 
+**DefaultToastCompression** | [**Enum**](Enum.md) | Accepted values: * &#x60;lz4&#x60; * &#x60;pglz&#x60; | [optional] 
+**IdleInTransactionSessionTimeout** | [**Int**](Int.md) | Accepted values: 0 - 604800000 | [optional] 
+**Jit** | **bool** | Accepted values: * &#x60;true&#x60; * &#x60;false&#x60; | [optional] 
+**LogAutovacuumMinDuration** | [**Int**](Int.md) | Accepted values: -1 - 2147483647 | [optional] 
+**LogErrorVerbosity** | [**Enum**](Enum.md) | Accepted values: * &#x60;TERSE&#x60; * &#x60;DEFAULT&#x60; * &#x60;VERBOSE&#x60; | [optional] 
+**LogLinePrefix** | [**Enum**](Enum.md) | Accepted values: * &#x60;&#39;pid&#x3D;%p,user&#x3D;%u,db&#x3D;%d,app&#x3D;%a,client&#x3D;%h &#39;&#x60; * &#x60;&#39;%t [%p]: [%l-1] user&#x3D;%u,db&#x3D;%d,app&#x3D;%a,client&#x3D;%h &#39;&#x60; * &#x60;&#39;%m [%p] %q[user&#x3D;%u,db&#x3D;%d,app&#x3D;%a] &#39;&#x60; | [optional] 
+**LogMinDurationStatement** | [**Int**](Int.md) | Accepted values: -1 - 86400000 | [optional] 
+**MaxFilesPerProcess** | [**Int**](Int.md) | Accepted values: 1000 - 4096 | [optional] 
+**MaxLocksPerTransaction** | [**Int**](Int.md) | Accepted values: 64 - 6400 | [optional] 
+**MaxLogicalReplicationWorkers** | [**Int**](Int.md) | Accepted values: 4 - 64 | [optional] 
+**MaxParallelWorkers** | [**Int**](Int.md) | Accepted values: 0 - 96 | [optional] 
+**MaxParallelWorkersPerGather** | [**Int**](Int.md) | Accepted values: 0 - 96 | [optional] 
+**MaxPredLocksPerTransaction** | [**Int**](Int.md) | Accepted values: 64 - 5120 | [optional] 
+**MaxPreparedTransactions** | [**Int**](Int.md) | Accepted values: 0 - 10000 | [optional] 
+**MaxReplicationSlots** | [**Int**](Int.md) | Accepted values: 8 - 64 | [optional] 
+**MaxStackDepth** | [**Int**](Int.md) | Accepted values: 2097152 - 6291456 | [optional] 
+**MaxStandbyArchiveDelay** | [**Int**](Int.md) | Accepted values: 1 - 43200000 | [optional] 
+**MaxStandbyStreamingDelay** | [**Int**](Int.md) | Accepted values: 1 - 43200000 | [optional] 
+**MaxWalSenders** | [**Int**](Int.md) | Accepted values: 20 - 64 | [optional] 
+**MaxWorkerProcesses** | [**Int**](Int.md) | Accepted values: 8 - 96 | [optional] 
+**PgPartmanBgwInterval** | [**Int**](Int.md) | Accepted values: 3600 - 604800 | [optional] 
+**PgPartmanBgwRole** | **string** | Maximum length: 64 characters | [optional] 
+**PgStatStatementsTrack** | [**Enum**](Enum.md) | Accepted values: * &#x60;all&#x60; * &#x60;top&#x60; * &#x60;none&#x60; | [optional] 
+**TempFileLimit** | [**Int**](Int.md) | Accepted values: -1 - 2147483647 | [optional] 
+**TrackActivityQuerySize** | [**Int**](Int.md) | Accepted values: 1024 - 10240 | [optional] 
+**TrackCommitTimestamp** | [**Enum**](Enum.md) | Accepted values: * &#x60;off&#x60; * &#x60;on&#x60; | [optional] 
+**TrackFunctions** | [**Enum**](Enum.md) | Accepted values: * &#x60;all&#x60; * &#x60;pl&#x60; * &#x60;none&#x60; | [optional] 
+**TrackIoTiming** | [**Enum**](Enum.md) | Accepted values: * &#x60;off&#x60; * &#x60;on&#x60; | [optional] 
+**WalSenderTimeout** | [**Int**](Int.md) | Accepted values: 0, 5000 - 10800000 | [optional] 
+**WalWriterDelay** | [**Int**](Int.md) | Accepted values: 10 - 200 | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
